@@ -1,1 +1,22 @@
-<h1>Hola</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Blog</title>
+</head>
+<body>
+    <h1>Mi Blog Personal</h1>
+
+    <a href="/crear">Crear Nuevo Post</a>
+
+    <hr>
+
+    {% for post in posts %}
+        <h2>{{post.titulo}}</h2>
+        <p>{{post.contenido}}</p>
+        <a href = "/eliminar/{{post.id}}">Eliminar Post</a>
+        <a href = "/editar/{{post.id}}">Editar Post</a>
+        <hr>
+
+    {% endfor %}
+</body>
+</html>
