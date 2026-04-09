@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 import json
-app = Flask(__name__, static_folder="static")
-
+app = Flask(__name__, static_folder='static')
 @app.route('/')
 def inicio():
     try:
